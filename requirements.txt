@@ -1,4 +1,5 @@
 gunicorn
 Flask
 Flask-PyMongo
-psycopg2-binary
+Flask==3.0.3
+pymongo==4.9.1
