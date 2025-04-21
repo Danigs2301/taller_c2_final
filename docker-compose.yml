@@ -5,7 +5,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MONGO_URI=mongodb://admin:password@mongo:27017/taskdb?authSource=admin
+      - MONGO_URI=mongodb+srv://adm:<123>@cluster0.kw5obel.mongodb.net/
     depends_on:
       - mongo
 
@@ -18,7 +18,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
-      ME_CONFIG_MONGODB_URL: "mongodb://admin:password@mongo:27017/?authSource=admin"
+      ME_CONFIG_MONGODB_URL: "mongodb+srv://adm:<123>@cluster0.kw5obel.mongodb.net/"
     depends_on:
       - mongo
 
@@ -28,8 +28,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_ROOT_USERNAME: adm
+      MONGO_INITDB_ROOT_PASSWORD: 123
     volumes:
       - mongo_data:/data/db
 
